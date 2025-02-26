@@ -11,6 +11,11 @@ from psychopy import prefs
 #prefs.hardware['audioDriver'] = 'coreaudio'
 #prefs.hardware['audioLatencyMode'] = 4
 prefs.hardware['audioLib'] = ['PTB']#,'pygame','sounddevice','PTB']
+try:
+    prefs.hardware['audioDevice'] = ['sysdefault']
+    print('using sysdefault audio device')
+except NotImplementedError:
+    print('could not setup sysdefault audio device')
 from psychopy import visual, core, sound, event, gui, logging
 import itertools as it
 import os

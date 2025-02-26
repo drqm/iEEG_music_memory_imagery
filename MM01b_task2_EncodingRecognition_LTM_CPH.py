@@ -34,6 +34,11 @@ from random import shuffle
 from psychopy import prefs
 #prefs.hardware['audioLib'] = ['sounddevice']
 prefs.hardware['audioLib'] = ['PTB']
+try:
+    prefs.hardware['audioDevice'] = ['sysdefault']
+    print('using sysdefault audio device')
+except NotImplementedError:
+    print('could not setup sysdefault audio device')
 # prefs.hardware['audioLib'] = ['pygame']
 from psychopy import visual, core, sound, event, gui, monitors, logging
 import itertools as it

@@ -5,7 +5,7 @@ import serial
 ##### Set port address to match your local machine
 
 #paddress = '/dev/parport0' # '0xDFF8' or 'COM1' in Windows
-paddress = 'COM6'#'/dev/ttyUSB0'#'COM3' #in Windows
+paddress = '/dev/ttyUSB0'#'COM6'##'COM3' #in Windows
 
 ##################################################
 
